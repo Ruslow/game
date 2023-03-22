@@ -41,36 +41,6 @@ const fountain = createImage(fountainImg);
 const runRight = createImage(runImg);
 const runLeft = createImage(runLeftImg);
 
-// class AnimObject {
-//   constructor() {
-//     this.x = 400;
-//     this.y = canvas.height - 90;
-//     this.image = fountainImp;
-//     this.width = 72;у
-//     this.height = 72;
-//     this.frame = 72;
-//     this.sx = 0;
-//     this.currentFrame = 0;
-//     this.totalFrames = 4;
-//     this.frameDraws = 0;
-//   }
-//   draw() {
-//     context.drawImage(
-//       this.image,
-//       this.sx,
-//       0,
-//       this.width,
-//       this.height,
-//       this.x,
-//       this.y,
-//       this.width,
-//       this.height
-//     );
-//   }
-// }
-
-// const fountainObj = new AnimObject();
-
 class Character {
   constructor() {
     this.position = {
@@ -313,16 +283,7 @@ function animate() {
       character.currentFrame++;
       character.frameDraws = 0;
     }
-    // fountainObj.currentFrame =
-    //   fountainObj.currentFrame % fountainObj.totalFrames;
-    // fountainObj.sx = fountainObj.currentFrame * fountainObj.width;
 
-    // fountainObj.frameDraws++;
-    // if (fountainObj.frameDraws >= 10) {
-    //   fountainObj.currentFrame++;
-    //   fountainObj.frameDraws = 0;
-    // }
-    // fountainObj.draw();
     platforms.forEach((platform) => {
       if (
         character.position.x + character.width / 2 >= platform.position.x &&
